@@ -4,7 +4,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class CalcTest {
-  Calc c = new Calc();
+
+    public class Calc {
+        public int add(int a, int b) {
+            return a + b;
+        }
+
+        public int subtract(int a, int b) {
+            return a - b;
+        }
+    }
+
+    
+    Calc c = new Calc();
 
     @Test
     void testAddition() {
@@ -15,5 +27,7 @@ public class CalcTest {
     public void testSubtraction() {
         assertEquals(2, c.subtract(4,2));
     }
+
+
 
 }
